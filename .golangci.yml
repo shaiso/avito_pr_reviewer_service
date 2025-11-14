@@ -1,0 +1,29 @@
+version: 2
+
+run:
+  timeout: 3m
+  issues-exit-code: 1
+
+linters:
+  enable:
+    - govet
+    - staticcheck
+    - errcheck
+    - unused
+    - revive
+
+linters-settings:
+  revive:
+    rules:
+      - name: indent-error-flow
+      - name: error-naming
+      - name: if-return
+      - name: range
+      - name: receiver-naming
+      - name: errorf
+      - name: exported
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
